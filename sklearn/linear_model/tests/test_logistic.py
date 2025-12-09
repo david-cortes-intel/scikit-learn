@@ -654,7 +654,7 @@ def test_multinomial_logistic_regression_string_inputs():
 
 @pytest.mark.parametrize("csr_container", CSR_CONTAINERS)
 def test_logistic_cv_sparse(global_random_seed, csr_container):
-    from sklearn import unpatch_sklearn
+    from sklearnex import unpatch_sklearn
     unpatch_sklearn()
     X, y = make_classification(
         n_samples=100, n_features=5, random_state=global_random_seed
